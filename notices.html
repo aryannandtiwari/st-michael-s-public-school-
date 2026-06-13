@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Notices | St. Michael's Public School
+</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="top-header">
+
+<div class="header-left">
+
+<img
+src="photos/logo.png"
+alt="School Logo"
+class="header-logo">
+
+<div>
+
+<h1>
+St. Michael's Public School
+</h1>
+
+<p>
+School Road, Thakurgaon, Ranchi
+</p>
+
+</div>
+
+</div>
+
+<a
+href="index.html"
+class="btn">
+
+Home
+
+</a>
+
+</header>
+
+<!-- NOTICE HERO -->
+
+<section class="notice-hero">
+
+<h1>
+School Notices
+</h1>
+
+<p>
+
+Latest announcements,
+important information,
+holiday notices,
+exam schedules,
+and updates.
+
+</p>
+
+</section>
+
+<!-- NOTICE LIST -->
+
+<section class="notice-page">
+
+<div
+id="noticeContainer">
+
+<div class="contact-card">
+
+Loading Notices...
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<img
+src="photos/logo.png"
+alt="School Logo"
+class="footer-logo">
+
+<h2>
+St. Michael's Public School
+</h2>
+
+<p>
+School Road, Thakurgaon, Ranchi, Jharkhand
+</p>
+
+<p>
+📞 +91-9835172689
+</p>
+
+<p>
+✉ director.stmichael@gmail.com
+</p>
+
+<p>
+
+© 2026
+St. Michael's Public School.
+All Rights Reserved.
+
+</p>
+
+</footer>
+
+<!-- FIREBASE -->
+
+<script type="module">
+
+import {
+initializeApp
+}
+from
+"https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+
+import {
+getFirestore,
+collection,
+onSnapshot
+}
+from
+"https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
+
+const firebaseConfig = {
+
+apiKey:
+"AIzaSyAUAeUvu6M1u8gKfrLnjI8Yrup27U0D5xw",
+
+authDomain:
+"st-michael-public-school-45c59.firebaseapp.com",
+
+projectId:
+"st-michael-public-school-45c59",
+
+storageBucket:
+"st-michael-public-school-45c59.firebasestorage.app",
+
+messagingSenderId:
+"540750803774",
+
+appId:
+"1:540750803774:web:9f1149236f631ef81af26f"
+
+};
+
+const app =
+initializeApp(firebaseConfig);
+
+const db =
+getFirestore(app);
+
+const noticeContainer =
+document.getElementById(
+"noticeContainer"
+);
+
+onSnapshot(
+collection(
+db,
+"notices"
+),
+(snapshot)=>{
+
+noticeContainer.innerHTML="";
+
+if(snapshot.empty){
+
+noticeContainer.innerHTML=`
+
+<div class="contact-card">
+
+<h3>
+No Notices Available
+</h3>
+
+<p>
+Please check again later.
+</p>
+
+</div>
+
+`;
+
+return;
+
+}
+
+snapshot.forEach(
+(docSnap)=>{
+
+const data =
+docSnap.data();
+
+noticeContainer.innerHTML += `
+
+<div class="contact-card notice-card">
+
+<h2>
+${data.title || "Notice"}
+</h2>
+
+<p>
+${data.content || ""}
+</p>
+
+</div>
+
+`;
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>
