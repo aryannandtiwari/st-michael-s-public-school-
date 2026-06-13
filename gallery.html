@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Gallery | St. Michael's Public School
+</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="top-header">
+
+<div class="header-left">
+
+<img
+src="photos/logo.png"
+alt="School Logo"
+class="header-logo">
+
+<div>
+
+<h1>
+St. Michael's Public School
+</h1>
+
+<p>
+School Road, Thakurgaon, Ranchi
+</p>
+
+</div>
+
+</div>
+
+<a
+href="index.html"
+class="btn">
+
+Home
+
+</a>
+
+</header>
+
+<!-- PAGE TITLE -->
+
+<section class="gallery-page-header">
+
+<h1>
+School Gallery
+</h1>
+
+<p>
+
+A glimpse into the vibrant life, learning, activities, achievements, and celebrations at St. Michael's Public School.
+
+</p>
+
+</section>
+
+<!-- GALLERY GRID -->
+
+<section class="gallery-page">
+
+<div class="gallery-grid">
+
+<img src="photos/gallery1.jpg" alt="Gallery Image 1">
+
+<img src="photos/gallery2.jpg" alt="Gallery Image 2">
+
+<img src="photos/gallery3.jpg" alt="Gallery Image 3">
+
+<img src="photos/gallery4.jpg" alt="Gallery Image 4">
+
+<img src="photos/gallery5.jpg" alt="Gallery Image 5">
+
+<img src="photos/gallery6.jpg" alt="Gallery Image 6">
+
+<img src="photos/gallery7.jpg" alt="Gallery Image 7">
+
+<img src="photos/gallery8.jpg" alt="Gallery Image 8">
+
+<img src="photos/gallery9.jpg" alt="Gallery Image 9">
+
+<img src="photos/gallery10.jpg" alt="Gallery Image 10">
+
+</div>
+
+</section>
+
+<!-- SCHOOL LIFE -->
+
+<section class="gallery-info">
+
+<h2>
+School Life
+</h2>
+
+<p>
+
+At St. Michael's Public School, students participate in academics, cultural programs, sports activities, celebrations, educational events, and personality development programs that help them grow into confident and responsible individuals.
+
+</p>
+
+</section>
+
+<!-- IMAGE PREVIEW MODAL -->
+
+<div
+id="imageModal"
+class="image-modal">
+
+<span
+id="closeImage">
+
+✖
+
+</span>
+
+<img
+id="modalImage"
+src=""
+alt="Preview">
+
+</div>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="footer-top">
+
+<img
+src="photos/logo.png"
+alt="School Logo"
+class="footer-logo">
+
+<h2>
+St. Michael's Public School
+</h2>
+
+</div>
+
+<p>
+School Road, Thakurgaon, Ranchi, Jharkhand
+</p>
+
+<p>
+📞 +91-9835172689
+</p>
+
+<p>
+✉ director.stmichael@gmail.com
+</p>
+
+<div class="footer-social">
+
+<a
+href="https://www.instagram.com/st_michaels_public_school_?igsh=MXFvZnlnMWd0NnRlZA=="
+target="_blank">
+
+Instagram
+
+</a>
+
+<a
+href="https://www.facebook.com/profile.php?id=61575520203477"
+target="_blank">
+
+Facebook
+
+</a>
+
+<a
+href="https://youtube.com/@manojtiwari2785?si=JkTLizBnV94j7YUj"
+target="_blank">
+
+YouTube
+
+</a>
+
+</div>
+
+<p>
+
+© 2026 St. Michael's Public School.
+All Rights Reserved.
+
+</p>
+
+</footer>
+
+<!-- IMAGE PREVIEW SCRIPT -->
+
+<script>
+
+const galleryImages =
+document.querySelectorAll(
+".gallery-grid img"
+);
+
+const imageModal =
+document.getElementById(
+"imageModal"
+);
+
+const modalImage =
+document.getElementById(
+"modalImage"
+);
+
+const closeImage =
+document.getElementById(
+"closeImage"
+);
+
+galleryImages.forEach(
+(img)=>{
+
+img.addEventListener(
+"click",
+()=>{
+
+imageModal.style.display =
+"flex";
+
+modalImage.src =
+img.src;
+
+});
+
+});
+
+closeImage.addEventListener(
+"click",
+()=>{
+
+imageModal.style.display =
+"none";
+
+});
+
+</script>
+
+</body>
+
+</html>
