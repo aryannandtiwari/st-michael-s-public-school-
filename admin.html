@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Admin Panel | St. Michael's Public School
+</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="top-header">
+
+<div class="header-left">
+
+<img
+src="photos/logo.png"
+alt="Logo"
+class="header-logo">
+
+<div>
+
+<h1>
+St. Michael's Public School
+</h1>
+
+<p>
+Admin Dashboard
+</p>
+
+</div>
+
+</div>
+
+<a
+href="index.html"
+class="btn">
+
+Home
+
+</a>
+
+</header>
+
+<section
+class="admin-dashboard">
+
+<h1>
+Admin Dashboard
+</h1>
+
+<p>
+Manage Notices, Reviews and Website Settings
+</p>
+
+</section>
+
+<!-- MAINTENANCE -->
+
+<section
+class="contact-card">
+
+<h2>
+Website Maintenance
+</h2>
+
+<label>
+
+<input
+type="checkbox"
+id="maintenanceToggle">
+
+Enable Maintenance Mode
+
+</label>
+
+</section>
+
+<!-- ADD NOTICE -->
+
+<section
+class="contact-card">
+
+<h2>
+Add Notice
+</h2>
+
+<input
+type="text"
+id="noticeTitle"
+placeholder="Notice Title">
+
+<textarea
+id="noticeContent"
+placeholder="Notice Content">
+</textarea>
+
+<button
+id="addNoticeBtn"
+class="btn">
+
+Publish Notice
+
+</button>
+
+</section>
+
+<!-- NOTICES -->
+
+<section
+class="contact-card">
+
+<h2>
+All Notices
+</h2>
+
+<div
+id="adminNotices">
+
+Loading...
+
+</div>
+
+</section>
+<!-- REVIEW MANAGEMENT -->
+
+<section
+class="contact-card">
+
+<h2>
+Pending Reviews
+</h2>
+
+<div
+id="reviewsList">
+
+Loading Reviews...
+
+</div>
+
+</section>
+
+<!-- APPROVED REVIEWS -->
+
+<section
+class="contact-card">
+
+<h2>
+Approved Reviews
+</h2>
+
+<div
+id="approvedReviewsList">
+
+Loading Reviews...
+
+</div>
+
+</section>
+
+<!-- QUICK STATS -->
+
+<section
+class="contact-card">
+
+<h2>
+Dashboard Information
+</h2>
+
+<div class="admin-stats">
+
+<p>
+📢 Manage School Notices
+</p>
+
+<p>
+⭐ Approve Parent Reviews
+</p>
+
+<p>
+🛠 Enable / Disable Maintenance Mode
+</p>
+
+<p>
+🏫 St. Michael's Public School
+</p>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<img
+src="photos/logo.png"
+alt="School Logo"
+class="footer-logo">
+
+<h2>
+St. Michael's Public School
+</h2>
+
+<p>
+School Road, Thakurgaon,
+Ranchi, Jharkhand
+</p>
+
+<p>
+📞 +91-9835172689
+</p>
+
+<p>
+✉ director.stmichael@gmail.com
+</p>
+
+<p>
+
+Admin Dashboard
+
+</p>
+
+<p>
+
+© 2026 St. Michael's Public School
+
+</p>
+
+</footer>
+
+<!-- ADMIN SCRIPT -->
+
+<script
+type="module"
+src="admin.js">
+</script>
+
+</body>
+
+</html>
