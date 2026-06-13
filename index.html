@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+St. Michael's Public School
+</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="top-header">
+
+<div class="header-left">
+
+<img
+src="photos/logo.png"
+alt="School Logo"
+class="header-logo">
+
+<div>
+
+<h1>
+St. Michael's Public School
+</h1>
+
+<p>
+School Road, Thakurgaon, Ranchi
+</p>
+
+</div>
+
+</div>
+
+<button
+id="menuBtn"
+class="menu-btn">
+
+☰
+
+</button>
+
+</header>
+
+<!-- MENU -->
+
+<div
+id="menuDropdown"
+class="menu-dropdown">
+
+<a href="about.html">
+About Us
+</a>
+
+<a href="gallery.html">
+Gallery
+</a>
+
+<a href="notices.html">
+Notices
+</a>
+
+<a href="contact.html">
+Contact Us
+</a>
+
+<a href="#reviewForm">
+Write Review
+</a>
+
+<a href="#"
+id="adminMenu">
+Admin Panel
+</a>
+
+</div>
+
+<!-- ADMIN LOGIN MODAL -->
+
+<div
+id="loginModal"
+class="modal">
+
+<div class="modal-content">
+
+<h2>
+Admin Login
+</h2>
+
+<input
+type="email"
+id="adminEmail"
+placeholder="Admin Email">
+
+<input
+type="password"
+id="adminPassword"
+placeholder="Password">
+
+<button
+id="loginBtn"
+class="btn">
+
+Login
+
+</button>
+
+<button
+onclick="closeLoginModal()"
+class="btn">
+
+Close
+
+</button>
+
+</div>
+
+</div>
+
+<!-- MAINTENANCE BANNER -->
+
+<div
+id="maintenanceBanner"
+class="maintenance-banner"
+style="display:none;">
+
+⚠ Website is currently under maintenance.
+For urgent queries contact:
++91 9835172689
+
+</div>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h2>
+CBSE Curriculum
+</h2>
+
+<h1>
+
+Welcome to
+St. Michael's Public School
+
+</h1>
+
+<p>
+
+Providing quality education,
+strong discipline,
+excellent character building,
+and affordable learning
+for every child.
+
+</p>
+
+<a
+href="about.html"
+class="btn">
+
+Know More
+
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<div class="water-frame">
+
+<img
+src="photos/school-main.jpg"
+alt="School Building">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- NOTICE PREVIEW -->
+
+<section
+class="notice-preview">
+
+<h2>
+
+Latest Notices
+
+</h2>
+
+<div
+id="noticeContainer">
+
+Loading Notices...
+
+</div>
+
+<a
+href="notices.html"
+class="btn">
+
+View All Notices
+
+</a>
+
+</section>
+
+<!-- ABOUT PREVIEW -->
+
+<section
+class="about-preview fire-border">
+
+<img
+src="photos/about-school.jpg"
+alt="School"
+class="about-preview-image">
+
+<h2>
+
+About Us
+
+</h2>
+
+<p>
+
+St. Michael's Public School is a premier English Medium Co-Educational Institution located in Thakurgaon on School Road, Ranchi.
+
+Since 2014, under the management of Bright Future Educational Trust (Regd.), the school has provided quality education while nurturing discipline, character and academic excellence.
+
+</p>
+
+<a
+href="about.html"
+class="btn">
+
+Read More
+
+</a>
+
+</section>
+<!-- DIRECTOR MESSAGE -->
+
+<section class="director-section electric-border">
+
+<h2>
+Director's Message
+</h2>
+
+<div class="director-container">
+
+<img
+src="photos/director.jpg"
+alt="Director"
+class="director-photo">
+
+<div>
+
+<p>
+
+"The purpose of education in institutions is not merely to prepare students for examination but for life itself. To fulfill my dream of educating children, St. Michael's Public School is moving ahead smoothly."
+
+</p>
+
+<p>
+
+"I have observed the achievements of the school in the past years. The teachers and students deserve to be congratulated on their special contributions to the growth of the school, academic excellence, and personality development."
+
+</p>
+
+<p>
+
+"Our ultimate goal is to nurture both intellect and character. We are incredibly grateful to our parents for their sincere involvement in the school's activities."
+
+</p>
+
+<h3>
+- M.N. Tiwari
+</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TEACHERS -->
+
+<section class="teachers-section">
+
+<h2>
+Our Teachers
+</h2>
+
+<div class="teachers-grid">
+
+<div class="teacher-card">
+<img src="photos/teacher1.jpg">
+<p>Senior Faculty</p>
+</div>
+
+<div class="teacher-card">
+<img src="photos/teacher2.jpg">
+<p>Primary Faculty</p>
+</div>
+
+<div class="teacher-card">
+<img src="photos/teacher3.jpg">
+<p>Science Faculty</p>
+</div>
+
+<div class="teacher-card">
+<img src="photos/teacher4.jpg">
+<p>Mathematics Faculty</p>
+</div>
+
+<div class="teacher-card">
+<img src="photos/teacher5.jpg">
+<p>Language Faculty</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY PREVIEW -->
+
+<section class="gallery-preview">
+
+<h2>
+School Gallery
+</h2>
+
+<div class="gallery-preview-list">
+
+<img src="photos/gallery1.jpg">
+
+<img src="photos/gallery2.jpg">
+
+<img src="photos/gallery3.jpg">
+
+<img src="photos/gallery4.jpg">
+
+<img src="photos/gallery5.jpg">
+
+</div>
+
+<a
+href="gallery.html"
+class="btn">
+
+View Full Gallery
+
+</a>
+
+</section>
+
+<!-- REVIEW FORM -->
+
+<section
+id="reviewForm"
+class="review-form-section">
+
+<h2>
+Write a Review
+</h2>
+
+<form
+id="reviewFormElement">
+
+<input
+type="text"
+id="reviewName"
+placeholder="Your Name"
+required>
+
+<input
+type="text"
+id="reviewRole"
+placeholder="Parent / Guardian"
+required>
+
+<textarea
+id="reviewText"
+placeholder="Write your review..."
+required>
+</textarea>
+
+<button
+type="submit"
+class="btn">
+
+Submit Review
+
+</button>
+
+</form>
+
+</section>
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="footer-top">
+
+<img
+src="photos/logo.png"
+alt="School Logo"
+class="footer-logo">
+
+<h2>
+St. Michael's Public School
+</h2>
+
+</div>
+
+<div class="footer-info">
+
+<p>
+📍 School Road, Thakurgaon, Ranchi, Jharkhand, India
+</p>
+
+<p>
+📞 +91-9835172689
+</p>
+
+<p>
+✉ director.stmichael@gmail.com
+</p>
+
+<p>
+School Timing:
+</p>
+
+<p>
+Normal Time:
+8:30am - 2:00pm
+</p>
+
+<p>
+Summer Time:
+7:25am - 12:00pm
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<h3>
+Quick Links
+</h3>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="about.html">
+About Us
+</a>
+
+<a href="gallery.html">
+Gallery
+</a>
+
+<a href="contact.html">
+Contact Us
+</a>
+
+<a href="notices.html">
+Notices
+</a>
+
+</div>
+
+<div class="footer-social">
+
+<h3>
+Follow Us
+</h3>
+
+<div class="social-icons">
+
+<a href="https://www.instagram.com/st_michaels_public_school_?igsh=MXFvZnlnMWd0NnRlZA==" target="_blank">
+<img src="photos/instagram.png" alt="Instagram">
+<p>Instagram</p>
+</a>
+
+<a href="https://www.facebook.com/profile.php?id=61575520203477" target="_blank">
+<img src="photos/facebook.png" alt="Facebook">
+<p>Facebook</p>
+</a>
+
+<a href="https://youtube.com/@manojtiwari2785?si=JkTLizBnV94j7YUj" target="_blank">
+<img src="photos/youtube.png" alt="YouTube">
+<p>YouTube</p>
+</a>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+
+© 2026
+St. Michael's Public School.
+All Rights Reserved.
+
+</p>
+
+</div>
+
+</footer>
+
+<script
+type="module"
+src="app.js">
+</script>
+
+</body>
+
+</html>
