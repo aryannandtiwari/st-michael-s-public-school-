@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+St. Michael's Public School
+</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- PARTICLES -->
+
+<div class="particles"></div>
+
+<!-- HEADER -->
+
+<header class="top-header">
+
+<div class="header-left">
+
+<img
+src="photos/logo.png"
+alt="School Logo"
+class="header-logo">
+
+<div class="school-title">
+
+<h1>
+St. Michael's Public School
+</h1>
+
+<p>
+School Road, Thakurgaon, Ranchi
+</p>
+
+</div>
+
+</div>
+
+<button
+id="menuBtn"
+class="menu-btn">
+
+☰
+
+</button>
+
+</header>
+
+<!-- MENU -->
+
+<div
+id="menuDropdown"
+class="menu-dropdown">
+
+<a href="about.html">
+About Us
+</a>
+
+<a href="gallery.html">
+Gallery
+</a>
+
+<a href="notices.html">
+Notices
+</a>
+
+<a href="contact.html">
+Contact Us
+</a>
+
+<a href="#reviewForm">
+Write Review
+</a>
+
+<hr>
+
+<h3>
+Admin Login
+</h3>
+
+<input
+type="email"
+id="adminEmail"
+placeholder="Admin Email">
+
+<input
+type="password"
+id="adminPassword"
+placeholder="Password">
+
+<button
+id="loginBtn"
+class="menu-login-btn">
+
+Login
+
+</button>
+
+</div>
+
+<!-- MAINTENANCE BANNER -->
+
+<div
+id="maintenanceBanner"
+class="maintenance-banner">
+
+⚠ Website is currently under maintenance.
+For urgent queries contact:
++91 9835172689
+
+</div>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h3>
+CBSE Curriculum
+</h3>
+
+<h1>
+
+Welcome to
+St. Michael's Public School
+
+</h1>
+
+<p>
+
+Providing quality education,
+strong discipline,
+excellent character building,
+and affordable learning
+for every child.
+
+</p>
+
+<a
+href="about.html"
+class="premium-btn">
+
+Know More
+
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<div class="water-frame">
+
+<img
+src="photos/school-main.jpg"
+alt="School Building">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- NOTICE SECTION -->
+
+<section class="notice-section">
+
+<h2>
+Latest Notices
+</h2>
+
+<div
+id="noticeContainer">
+
+<div class="notice-box">
+
+<h3>
+Loading Notices...
+</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT PREVIEW -->
+
+<section class="about-preview fire-border">
+
+<img
+src="photos/about-school.jpg"
+alt="About School"
+class="about-preview-image">
+
+<h2>
+About Us
+</h2>
+
+<p>
+
+St. Michael's Public School is a premier English Medium Co-Educational Institution located in Thakurgaon on School Road, Ranchi.
+
+Since 2014, under the management of Bright Future Educational Trust (Regd.), the school has provided quality education while nurturing discipline, character and academic excellence.
+
+</p>
+
+<a
+href="about.html"
+class="premium-btn">
+
+Read More
+
+</a>
+
+</section>
+<!-- DIRECTOR MESSAGE -->
+
+<section class="director-section electric-border">
+
+<h2>
+Director's Message
+</h2>
+
+<div class="director-container">
+
+<img
+src="photos/director.jpg"
+alt="Director"
+class="director-photo">
+
+<h3>
+M.N. Tiwari
+</h3>
+
+<p>
+
+"The purpose of education in institutions is not merely to prepare students for examinations but for life itself."
+
+</p>
+
+<p>
+
+"St. Michael's Public School continues to move forward with the vision of building disciplined, knowledgeable and responsible citizens."
+
+</p>
+
+<p>
+
+"Our goal is to nurture both intellect and character while providing quality education to every child."
+
+</p>
+
+</div>
+
+</section>
+
+<!-- TEACHERS -->
+
+<section class="teachers-section">
+
+<h2>
+Our Faculty
+</h2>
+
+<div class="teachers-grid">
+
+<div class="teacher-card">
+<img src="photos/teacher1.jpg">
+<p>Senior Faculty</p>
+</div>
+
+<div class="teacher-card">
+<img src="photos/teacher2.jpg">
+<p>Primary Faculty</p>
+</div>
+
+<div class="teacher-card">
+<img src="photos/teacher3.jpg">
+<p>Science Faculty</p>
+</div>
+
+<div class="teacher-card">
+<img src="photos/teacher4.jpg">
+<p>Mathematics Faculty</p>
+</div>
+
+<div class="teacher-card">
+<img src="photos/teacher5.jpg">
+<p>Language Faculty</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY PREVIEW -->
+
+<section class="gallery-section">
+
+<h2>
+School Gallery
+</h2>
+
+<div class="gallery-preview">
+
+<img src="photos/gallery1.jpg">
+<img src="photos/gallery2.jpg">
+<img src="photos/gallery3.jpg">
+<img src="photos/gallery4.jpg">
+<img src="photos/gallery5.jpg">
+
+</div>
+
+<a
+href="gallery.html"
+class="premium-btn">
+
+View Full Gallery
+
+</a>
+
+</section>
+
+<!-- REVIEW FORM -->
+
+<section
+id="reviewForm"
+class="review-section">
+
+<h2>
+Write a Review
+</h2>
+
+<form
+id="reviewFormElement">
+
+<input
+type="text"
+id="reviewName"
+placeholder="Your Name"
+required>
+
+<input
+type="text"
+id="reviewRole"
+placeholder="Parent / Guardian"
+required>
+
+<textarea
+id="reviewText"
+placeholder="Write your review..."
+required></textarea>
+
+<button
+type="submit"
+class="premium-btn">
+
+Submit Review
+
+</button>
+
+</form>
+
+</section>
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="footer-top">
+
+<img
+src="photos/logo.png"
+alt="School Logo"
+class="footer-logo">
+
+<h2>
+St. Michael's Public School
+</h2>
+
+<p>
+School Road, Thakurgaon, Ranchi, Jharkhand, India
+</p>
+
+</div>
+
+<div class="footer-grid">
+
+<!-- CONTACT -->
+
+<div class="footer-card">
+
+<h3>
+Contact Information
+</h3>
+
+<p>
+📍 School Road, Thakurgaon, Ranchi, Jharkhand
+</p>
+
+<p>
+📞 +91-9835172689
+</p>
+
+<p>
+✉ director.stmichael@gmail.com
+</p>
+
+<p>
+🕒 Normal Time: 8:30 AM – 2:00 PM
+</p>
+
+<p>
+🕒 Summer Time: 7:25 AM – 12:00 PM
+</p>
+
+</div>
+
+<!-- QUICK LINKS -->
+
+<div class="footer-card">
+
+<h3>
+Quick Links
+</h3>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="about.html">
+About Us
+</a>
+
+<a href="gallery.html">
+Gallery
+</a>
+
+<a href="contact.html">
+Contact Us
+</a>
+
+<a href="notices.html">
+Notices
+</a>
+
+</div>
+
+<!-- USEFUL LINKS -->
+
+<div class="footer-card">
+
+<h3>
+Useful Links
+</h3>
+
+<a
+href="https://ncert.nic.in"
+target="_blank">
+NCERT
+</a>
+
+<a
+href="https://epathshala.nic.in"
+target="_blank">
+ePathshala
+</a>
+
+<a
+href="https://cbseacademic.nic.in"
+target="_blank">
+CBSE Academic
+</a>
+
+<a
+href="https://diksha.gov.in"
+target="_blank">
+DIKSHA
+</a>
+
+</div>
+
+</div>
+
+<!-- SOCIAL LOGOS ONLY -->
+
+<div class="footer-social">
+
+<h3>
+Follow Us
+</h3>
+
+<div class="social-icons">
+
+<a
+href="https://www.instagram.com/st_michaels_public_school_?igsh=MXFvZnlnMWd0NnRlZA=="
+target="_blank">
+
+<img
+src="photos/instagram.png"
+alt="Instagram">
+
+</a>
+
+<a
+href="https://www.facebook.com/profile.php?id=61575520203477"
+target="_blank">
+
+<img
+src="photos/facebook.png"
+alt="Facebook">
+
+</a>
+
+<a
+href="https://youtube.com/@manojtiwari2785"
+target="_blank">
+
+<img
+src="photos/youtube.png"
+alt="YouTube">
+
+</a>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+
+© 2026 St. Michael's Public School.
+All Rights Reserved.
+
+</p>
+
+<p>
+
+Managed by Bright Future Educational Trust (Regd.)
+
+</p>
+
+</div>
+
+</footer>
+
+<!-- APP JS -->
+
+<script
+type="module"
+src="app.js">
+</script>
+
+</body>
+</html>
