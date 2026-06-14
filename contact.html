@@ -143,105 +143,28 @@ Open Google Maps
 
 <!-- ADMISSION ENQUIRY -->
 
-<section class="enquiry-section">
+<script>
+document.getElementById("admissionForm").addEventListener("submit", function(e){
+  e.preventDefault();
 
-<h2>
-Admission Enquiry
-</h2>
+  const parentName = this.parentName.value;
+  const childName = this.childName.value;
+  const mobile = this.mobile.value;
+  const className = this.class.value;
+  const message = this.message.value;
 
-<form
-id="enquiryForm">
+  console.log("Admission Enquiry:", {
+    parentName,
+    childName,
+    mobile,
+    className,
+    message
+  });
 
-<input
-type="text"
-placeholder="Parent Name"
-required>
-
-<input
-type="text"
-placeholder="Child Name"
-required>
-
-<input
-type="tel"
-placeholder="Mobile Number"
-required>
-
-<select required>
-
-<option value="">
-Select Class
-</option>
-
-<option>
-Nursery
-</option>
-
-<option>
-KG
-</option>
-
-<option>
-Prep
-</option>
-
-<option>
-STD I
-</option>
-
-<option>
-STD II
-</option>
-
-<option>
-STD III
-</option>
-
-<option>
-STD IV
-</option>
-
-<option>
-STD V
-</option>
-
-<option>
-STD VI
-</option>
-
-<option>
-STD VII
-</option>
-
-<option>
-STD VIII
-</option>
-
-<option>
-STD IX
-</option>
-
-<option>
-STD X
-</option>
-
-</select>
-
-<textarea
-placeholder="Your Message">
-</textarea>
-
-<button
-type="submit"
-class="btn">
-
-Send Enquiry
-
-</button>
-
-</form>
-
-</section>
+  alert("Admission enquiry submitted successfully!");
+  this.reset();
+});
+</script>
 
 <!-- SOCIAL LINKS -->
 
