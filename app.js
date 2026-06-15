@@ -231,8 +231,7 @@ By M.N. Tiwari
 
 // ===================================
 // MAINTENANCE MODE
-//  ===================================
-
+// ===================================
 
 async function checkMaintenance(){
 
@@ -262,6 +261,8 @@ if(data.maintenance){
 document.body.innerHTML = `
 <div class="maintenance-page">
 
+    <div id="adminDot"></div>
+
     <h1>⚠ Website Under Maintenance</h1>
 
     <h2>St. Michael's Public School</h2>
@@ -290,12 +291,35 @@ document.body.innerHTML = `
 </div>
 `;
 
+setTimeout(() => {
+
+const dot =
+document.getElementById(
+"adminDot"
+);
+
+if(dot){
+
+dot.addEventListener(
+"click",
+() => {
+
+window.location.href =
+"admin.html";
+
+});
+
+}
+
+},100);
+
 return;
 
 }
 
 if(banner){
-banner.style.display = "none";
+banner.style.display =
+"none";
 }
 
 }
