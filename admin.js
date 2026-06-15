@@ -22,6 +22,12 @@ updateDoc
 from
 "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
 
+import {
+getAuth,
+onAuthStateChanged
+}
+from
+"https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
 
 // =========================
 // FIREBASE CONFIG
@@ -59,6 +65,27 @@ initializeApp(firebaseConfig);
 
 const db =
 getFirestore(app);
+
+const auth =
+getAuth(app);
+
+onAuthStateChanged(
+auth,
+(user)=>{
+
+if(!user){
+
+alert(
+"Please login first."
+);
+
+window.location.href =
+"index.html";
+
+}
+
+}
+);
 
 
 // =========================
