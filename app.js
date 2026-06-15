@@ -231,7 +231,8 @@ By M.N. Tiwari
 
 // ===================================
 // MAINTENANCE MODE
-// ===================================
+//  ===================================
+
 
 async function checkMaintenance(){
 
@@ -239,8 +240,6 @@ const banner =
 document.getElementById(
 "maintenanceBanner"
 );
-
-if(!banner) return;
 
 try{
 
@@ -260,14 +259,43 @@ snap.data();
 
 if(data.maintenance){
 
-banner.style.display =
-"block";
+document.body.innerHTML = `
+<div class="maintenance-page">
 
-}else{
+    <h1>⚠ Website Under Maintenance</h1>
 
-banner.style.display =
-"none";
+    <h2>St. Michael's Public School</h2>
 
+    <p>
+        We are currently improving our website to provide a better experience
+        for students, parents and visitors.
+    </p>
+
+    <p>
+        Thank you for your patience and support.
+        We will be back online shortly.
+    </p>
+
+    <div class="contact-box">
+        📞 +91 9835172689<br>
+        ✉ director.stmichael@gmail.com
+    </div>
+
+    <div class="bottom-message">
+        St. Michael's Public School, School Road, Thakurgaon, Ranchi, Jharkhand.
+        <br>
+        Committed to Excellence, Discipline and Character.
+    </div>
+
+</div>
+`;
+
+return;
+
+}
+
+if(banner){
+banner.style.display = "none";
 }
 
 }
@@ -280,6 +308,8 @@ console.error(error);
 }
 
 checkMaintenance();
+
+
 // ===================================
 // REVIEW SUBMISSION
 // ===================================
