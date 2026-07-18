@@ -334,7 +334,7 @@ View Full Gallery
 
 </section>
 
-<!-- REVIEW FORM -->
+<!-- REVIEW SECTION -->
 
 <section
 id="reviewForm"
@@ -345,7 +345,8 @@ Write a Review
 </h2>
 
 <form
-id="reviewFormElement">
+id="reviewFormElement"
+class="glass-review-form">
 
 <input
 type="text"
@@ -374,14 +375,35 @@ Submit Review
 
 </form>
 
-<h2>
+<h2 class="review-heading">
 Parent Reviews
 </h2>
 
+<div class="reviews-slider">
+
+<button
+id="prevReview"
+class="review-arrow">
+
+❮
+
+</button>
+
 <div
-id="reviewsContainer">
+id="reviewsContainer"
+class="reviews-track">
 
 Loading Reviews...
+
+</div>
+
+<button
+id="nextReview"
+class="review-arrow">
+
+❯
+
+</button>
 
 </div>
 
