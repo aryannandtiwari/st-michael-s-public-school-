@@ -319,7 +319,17 @@ if(dot){
 
 dot.addEventListener("click",()=>{
 
-window.location.href="index.html";
+const password = prompt("Enter Admin Password");
+
+if(password==="aryan5219@"){
+
+window.location.href="admin.html";
+
+}else if(password!==null){
+
+alert("Incorrect Password");
+
+}
 
 });
 
