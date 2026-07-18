@@ -233,79 +233,93 @@ By M.N. Tiwari
 // MAINTENANCE MODE
 // ===================================
 
-async function checkMaintenance(){
+async function checkMaintenance() {
 
-const banner =
-document.getElementById(
-"maintenanceBanner"
+const banner = document.getElementById("maintenanceBanner");
+
+try {
+
+const snap = await getDoc(
+doc(db, "settings", "website")
 );
 
-try{
+if (!snap.exists()) return;
 
-const snap =
-await getDoc(
-doc(
-db,
-"settings",
-"website"
-)
-);
+const data = snap.data();
 
-if(!snap.exists()) return;
-
-const data =
-snap.data();
-
-if(data.maintenance){
+if (data.maintenance === true) {
 
 document.body.innerHTML = `
+
 <div class="maintenance-page">
 
-    <div id="adminDot"></div>
+    <div id="adminDot" title="Admin Login"></div>
+
+    <img src="photos/logo.png" class="maintenance-logo">
 
     <h1>⚠ Website Under Maintenance</h1>
 
     <h2>St. Michael's Public School</h2>
 
     <p>
-        We are currently improving our website to provide a better experience
-        for students, parents and visitors.
+        We are currently upgrading our website to serve students,
+        parents and visitors with a better experience.
     </p>
 
     <p>
-        Thank you for your patience and support.
+        Thank you for your patience.
         We will be back online shortly.
     </p>
 
-    <div class="contact-box">
-        📞 +91 9835172689<br>
-        ✉ director.stmichael@gmail.com
+    <div class="maintenance-school">
+
+        <h3>
+            Excellence • Discipline • Character
+        </h3>
+
+        <p>
+            St. Michael's Public School is committed to nurturing young minds
+            through quality education, strong values and academic excellence.
+        </p>
+
+        <p>
+            With a focus on Discipline and Character, the school empowers
+            students to become confident, responsible and successful individuals.
+        </p>
+
     </div>
 
-    <div class="bottom-message">
-        St. Michael's Public School, School Road, Thakurgaon, Ranchi, Jharkhand.
+    <div class="contact-box">
+
+        📍 School Road, Thakurgaon, Ranchi, Jharkhand
+
+        <br><br>
+
+        📞 +91 9835172689
+
         <br>
-        Committed to Excellence, Discipline and Character.
+
+        ✉ director.stmichael@gmail.com
+
     </div>
+
+    <small>
+        © 2026 St. Michael's Public School
+    </small>
 
 </div>
+
 `;
 
 setTimeout(() => {
 
-const dot =
-document.getElementById(
-"adminDot"
-);
+const dot = document.getElementById("adminDot");
 
 if(dot){
 
-dot.addEventListener(
-"click",
-() => {
+dot.addEventListener("click",()=>{
 
-window.location.href =
-"admin.html";
+window.location.href="index.html";
 
 });
 
@@ -318,8 +332,9 @@ return;
 }
 
 if(banner){
-banner.style.display =
-"none";
+
+banner.style.display="none";
+
 }
 
 }
