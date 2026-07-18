@@ -604,49 +604,53 @@ box-shadow:
 =================================== */
 
 .review-section{
-
-background:
-linear-gradient(
-135deg,
-#fff5f5,
-#ffffff
-);
-
+    max-width:700px;
+    margin:80px auto;
+    padding:30px;
+    border-radius:28px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.25);
+    box-shadow:0 10px 35px rgba(0,0,0,.18);
 }
 
 #reviewFormElement{
-
-max-width:800px;
-
-margin:auto;
-
-display:flex;
-
-flex-direction:column;
-
-gap:15px;
-
+    display:flex;
+    flex-direction:column;
+    gap:15px;
 }
 
 #reviewFormElement input,
 #reviewFormElement textarea{
+    padding:14px 18px;
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.25);
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(10px);
+    color:#222;
+    font-size:16px;
+    outline:none;
+}
 
-padding:15px;
-
-border:2px solid #ddd;
-
-border-radius:15px;
-
-font-size:16px;
-
+#reviewFormElement input{
+    height:50px;
 }
 
 #reviewFormElement textarea{
+    height:120px;
+    resize:none;
+}
 
-height:220px;
+#reviewFormElement input::placeholder,
+#reviewFormElement textarea::placeholder{
+    color:#666;
+}
 
-resize:none;
-
+#reviewFormElement .premium-btn{
+    width:220px;
+    margin:10px auto 0;
+    border-radius:30px;
 }
 /* ===================================
    APPROVED REVIEWS
