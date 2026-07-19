@@ -25,7 +25,6 @@ linear-gradient(
 color:#222;
 overflow-x:hidden;
 }
-
 /* ===================================
    HEADER
 =================================== */
@@ -40,38 +39,122 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 
-padding:15px 25px;
+padding:14px 25px;
 
 background:rgba(255,255,255,.95);
 
-backdrop-filter:blur(10px);
+backdrop-filter:blur(12px);
 
 box-shadow:
-0 5px 25px rgba(0,0,0,.08);
+0 5px 20px rgba(0,0,0,.08);
 
 }
 
 .header-left{
+
 display:flex;
 align-items:center;
-gap:15px;
+gap:16px;
+
 }
 
 .header-logo{
-width:75px;
-height:75px;
+
+width:72px;
+height:72px;
+
 object-fit:contain;
+
+filter:
+drop-shadow(0 0 10px rgba(13,71,161,.25));
+
+}
+
+.school-title{
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+
 }
 
 .school-title h1{
-font-size:28px;
+
+font-size:26px;
+
 font-weight:800;
+
+line-height:1.15;
+
 color:#0d47a1;
+
+letter-spacing:-0.4px;
+
+position:relative;
+
+display:inline-block;
+
+overflow:hidden;
+
+text-shadow:
+0 2px 5px rgba(0,0,0,.08);
+
+}
+
+.school-title h1::after{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:-120%;
+
+width:35%;
+height:100%;
+
+background:
+linear-gradient(
+110deg,
+transparent,
+rgba(255,255,255,.9),
+transparent
+);
+
+transform:skewX(-20deg);
+
+animation:headerShine 5s linear infinite;
+
+}
+
+@keyframes headerShine{
+
+0%{
+
+left:-120%;
+
+}
+
+100%{
+
+left:150%;
+
+}
+
 }
 
 .school-title p{
+
 font-size:14px;
+
+font-weight:500;
+
 color:#666;
+
+margin-top:6px;
+
+letter-spacing:.3px;
+
 }
 
 /* ===================================
