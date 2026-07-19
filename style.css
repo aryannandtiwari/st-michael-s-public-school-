@@ -273,25 +273,40 @@ color:#111;
 
 display:flex;
 align-items:center;
-justify-content:center;
+justify-content:space-between;
 
-gap:50px;
+gap:40px;
 
 padding:55px 8%;
 
-min-height:90vh;
+min-height:75vh;
 
 }
 
 .hero-content{
+
 flex:1;
+
+max-width:600px;
+
 }
 
-.hero-content h3{
+.hero-subtitle{
 
-font-size:22px;
-color:#ff5722;
+font-size:16px;
+
+font-weight:700;
+
+letter-spacing:5px;
+
+text-transform:uppercase;
+
+color:#FFD700;
+
 margin-bottom:10px;
+
+text-shadow:
+0 0 10px rgba(255,215,0,.6);
 
 }
 
@@ -301,61 +316,83 @@ font-size:42px;
 
 font-weight:800;
 
-line-height:1.2;
-
-margin-bottom:15px;
+line-height:1.15;
 
 color:#12355B;
+
+margin-bottom:18px;
 
 }
 
 .hero-content p{
 
-font-size:18px;
+font-size:17px;
 
 line-height:1.8;
 
-margin-bottom:30px;
+color:#555;
 
-color:#444;
+margin-bottom:22px;
 
 }
 
 .hero-image{
+
 flex:1;
+
 display:flex;
+
 justify-content:center;
+
+align-items:center;
+
 }
 
 .water-frame{
 
-padding:10px;
+padding:8px;
 
-border-radius:30px;
+border-radius:28px;
 
-border:5px solid #00bfff;
+background:
+linear-gradient(
+135deg,
+#FFD700,
+#00BFFF,
+#FFD700
+);
 
 box-shadow:
-0 0 25px #00bfff,
-0 0 60px rgba(0,191,255,.6);
+0 0 20px rgba(255,215,0,.35),
+0 0 35px rgba(0,191,255,.25);
 
 }
 
 .water-frame img{
 
 width:100%;
-max-width:700px;
 
-border-radius:25px;
+max-width:700px;
 
 display:block;
 
+border-radius:22px;
+
 }
+
 .premium-btn{
 
 display:inline-block;
 
 padding:12px 26px;
+
+font-size:15px;
+
+font-weight:700;
+
+text-decoration:none;
+
+color:#12355B;
 
 background:
 linear-gradient(
@@ -364,18 +401,10 @@ linear-gradient(
 #F5B800
 );
 
-color:#12355B;
-
-text-decoration:none;
-
 border-radius:30px;
 
-font-size:15px;
-
-font-weight:700;
-
 box-shadow:
-0 0 18px rgba(255,215,0,.35);
+0 0 18px rgba(255,215,0,.4);
 
 transition:.3s;
 
@@ -386,7 +415,7 @@ transition:.3s;
 transform:translateY(-3px);
 
 box-shadow:
-0 0 28px rgba(255,215,0,.55);
+0 0 28px rgba(255,215,0,.6);
 
 }
 
@@ -655,128 +684,283 @@ box-shadow:
 0 8px 20px rgba(0,0,0,.1);
 
 }
+
 /* ===================================
-   REVIEW FORM
+   REVIEW SECTION
 =================================== */
 
 .review-section{
-    max-width:700px;
-    margin:80px auto;
-    padding:30px;
-    border-radius:28px;
-    background:rgba(255,255,255,.12);
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
-    border:1px solid rgba(255,255,255,.25);
-    box-shadow:0 10px 35px rgba(0,0,0,.18);
+
+padding:60px 20px;
+
+background:
+linear-gradient(
+180deg,
+#ffffff,
+#f8fbff
+);
+
 }
 
-#reviewFormElement{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+.review-section h2{
+
+font-size:34px;
+
+font-weight:800;
+
+text-align:center;
+
+color:#12355B;
+
+margin-bottom:25px;
+
+text-shadow:
+0 0 12px rgba(255,215,0,.25);
+
 }
 
-#reviewFormElement input,
-#reviewFormElement textarea{
-    padding:14px 18px;
-    border-radius:18px;
-    border:1px solid rgba(255,255,255,.25);
-    background:rgba(255,255,255,.18);
-    backdrop-filter:blur(10px);
-    color:#222;
-    font-size:16px;
-    outline:none;
-}
+/* FORM */
 
-#reviewFormElement input{
-    height:50px;
-}
+.glass-review-form{
 
-#reviewFormElement textarea{
-    height:120px;
-    resize:none;
-}
+max-width:650px;
 
-#reviewFormElement input::placeholder,
-#reviewFormElement textarea::placeholder{
-    color:#666;
-}
+margin:0 auto 35px;
 
-#reviewFormElement .premium-btn{
-    width:220px;
-    margin:10px auto 0;
-    border-radius:30px;
-}
-/* ===================================
-   APPROVED REVIEWS
-=================================== */
+padding:25px;
 
-#reviewsContainer{
+background:rgba(255,255,255,.25);
 
-margin-top:30px;
+backdrop-filter:blur(18px);
+
+-webkit-backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,215,0,.35);
+
+border-radius:24px;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,.08),
+0 0 20px rgba(255,215,0,.15);
 
 display:flex;
 
-justify-content:center;
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.glass-review-form input,
+.glass-review-form textarea{
+
+width:100%;
+
+padding:14px 18px;
+
+border:none;
+
+outline:none;
+
+border-radius:15px;
+
+font-size:15px;
+
+background:rgba(255,255,255,.75);
+
+}
+
+.glass-review-form textarea{
+
+height:120px;
+
+resize:none;
+
+}
+
+/* REVIEW HEADING */
+
+.review-heading{
+
+margin-top:45px;
+
+margin-bottom:20px;
+
+}
+
+/* SLIDER */
+
+.reviews-slider{
+
+max-width:760px;
+
+margin:auto;
+
+display:flex;
 
 align-items:center;
 
-min-height:220px;
+justify-content:center;
+
+gap:15px;
+
+}
+
+/* REVIEW CARD */
+
+.reviews-track{
+
+flex:1;
+
+min-height:180px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+overflow:hidden;
 
 }
 
 .review-card{
 
-max-width:650px;
 width:100%;
 
 padding:25px;
 
-background:rgba(255,255,255,.18);
+border-radius:22px;
 
-backdrop-filter:blur(18px);
--webkit-backdrop-filter:blur(18px);
+background:rgba(255,255,255,.55);
 
-border:1px solid rgba(255,255,255,.3);
+backdrop-filter:blur(16px);
 
-border-radius:25px;
+-webkit-backdrop-filter:blur(16px);
 
-box-shadow:0 10px 30px rgba(0,0,0,.15);
+border:1px solid rgba(255,215,0,.35);
+
+box-shadow:
+0 8px 20px rgba(0,0,0,.08),
+0 0 18px rgba(255,215,0,.18);
 
 text-align:center;
 
-animation:fadeReview .6s ease;
+animation:reviewFade .45s ease;
 
 }
 
 .review-card h4{
 
-font-size:24px;
+font-size:22px;
 
-color:#0d47a1;
+color:#12355B;
 
-margin-bottom:10px;
+margin-bottom:8px;
 
 }
 
 .review-card p{
 
-margin:8px 0;
+font-size:15px;
 
 line-height:1.7;
 
-color:#333;
+color:#444;
+
+margin:6px 0;
 
 }
 
-@keyframes fadeReview{
+/* ARROWS */
+
+.review-arrow{
+
+width:45px;
+
+height:45px;
+
+border:none;
+
+border-radius:50%;
+
+cursor:pointer;
+
+font-size:22px;
+
+background:
+linear-gradient(
+135deg,
+#FFD700,
+#F5B800
+);
+
+color:#12355B;
+
+box-shadow:
+0 0 15px rgba(255,215,0,.35);
+
+transition:.3s;
+
+}
+
+.review-arrow:hover{
+
+transform:scale(1.08);
+
+box-shadow:
+0 0 25px rgba(255,215,0,.55);
+
+}
+
+/* DOTS */
+
+.review-dots{
+
+display:flex;
+
+justify-content:center;
+
+gap:10px;
+
+margin-bottom:15px;
+
+}
+
+.review-dot{
+
+width:10px;
+
+height:10px;
+
+border-radius:50%;
+
+background:#d0d0d0;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.review-dot.active{
+
+background:#FFD700;
+
+box-shadow:
+0 0 12px rgba(255,215,0,.7);
+
+}
+
+/* ANIMATION */
+
+@keyframes reviewFade{
 
 from{
 
 opacity:0;
 
-transform:translateX(40px);
+transform:translateX(30px);
 
 }
 
@@ -788,7 +972,8 @@ transform:translateX(0);
 
 }
 
-}
+                }
+
 
 /* ===================================
    FOOTER
