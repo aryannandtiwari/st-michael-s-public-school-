@@ -26,94 +26,215 @@ color:#222;
 overflow-x:hidden;
 }
 
+
 /* ===================================
    HEADER
 =================================== */
 
 .top-header{
 
-position:sticky;
+position:fixed;
 top:0;
-z-index:999;
+left:0;
+width:100%;
 
 display:flex;
 justify-content:space-between;
 align-items:center;
 
-padding:10px 22px;
+padding:10px 25px;
 
 background:rgba(255,255,255,.96);
-backdrop-filter:blur(12px);
 
-border-bottom:3px solid;
+backdrop-filter:blur(15px);
 
-animation:borderGlow 6s linear infinite;
+box-shadow:
+0 5px 18px rgba(0,0,0,.08);
 
-box-shadow:0 5px 18px rgba(0,0,0,.08);
+border-bottom:3px solid transparent;
 
-}
+border-image:linear-gradient(
+90deg,
+#FFD700,
+#FF9800,
+#00E5FF,
+#4CAF50,
+#FFD700
+)1;
 
-@keyframes borderGlow{
+animation:headerGlow 6s linear infinite;
 
-0%{border-color:#0d47a1;}
+z-index:9999;
 
-25%{border-color:#FFD700;}
-
-50%{border-color:#00bcd4;}
-
-75%{border-color:#43a047;}
-
-100%{border-color:#0d47a1;}
+overflow:visible;
 
 }
 
 .header-left{
+
 display:flex;
 align-items:center;
-gap:12px;
+gap:14px;
+
 }
 
 .header-logo{
 
 width:60px;
 height:60px;
+
 object-fit:contain;
+
+filter:
+drop-shadow(0 0 10px rgba(255,215,0,.5));
 
 }
 
 .school-title{
+
 display:flex;
 flex-direction:column;
+justify-content:center;
+
 }
 
 .school-title h1{
 
 font-size:22px;
 font-weight:800;
+line-height:1.1;
 
-color:#12355B;
+color:#0D47A1;
 
-line-height:1.05;
+letter-spacing:.5px;
 
-white-space:nowrap;
-
-letter-spacing:.3px;
-
-margin:0;
+text-shadow:
+0 0 8px rgba(255,215,0,.4);
 
 }
 
 .school-title p{
 
-margin-top:3px;
-
 font-size:12px;
 
-font-weight:500;
+font-weight:600;
 
-color:#666;
+color:#555;
 
-letter-spacing:.6px;
+margin-top:3px;
+
+}
+
+.menu-btn{
+
+width:52px;
+height:52px;
+
+border:none;
+
+border-radius:50%;
+
+cursor:pointer;
+
+font-size:28px;
+
+font-weight:700;
+
+color:#fff;
+
+background:
+linear-gradient(
+135deg,
+#FFD700,
+#FF9800
+);
+
+box-shadow:
+0 0 18px rgba(255,193,7,.6);
+
+transition:.3s;
+
+}
+
+.menu-btn:hover{
+
+transform:rotate(90deg);
+
+box-shadow:
+0 0 28px rgba(255,193,7,.9);
+
+}
+
+.menu-dropdown{
+
+display:none;
+
+position:absolute;
+
+top:78px;
+
+right:0;
+
+width:280px;
+
+background:#fff;
+
+border-radius:20px;
+
+padding:15px;
+
+border:2px solid #FFD700;
+
+box-shadow:
+0 15px 35px rgba(0,0,0,.18);
+
+z-index:10000;
+
+}
+
+@keyframes headerGlow{
+
+0%{
+
+border-image:
+linear-gradient(
+90deg,
+#FFD700,
+#FF9800,
+#00E5FF,
+#4CAF50,
+#FFD700
+)1;
+
+}
+
+50%{
+
+border-image:
+linear-gradient(
+90deg,
+#00E5FF,
+#4CAF50,
+#FFD700,
+#FF9800,
+#00E5FF
+)1;
+
+}
+
+100%{
+
+border-image:
+linear-gradient(
+90deg,
+#FFD700,
+#FF9800,
+#00E5FF,
+#4CAF50,
+#FFD700
+)1;
+
+}
 
 }
 
