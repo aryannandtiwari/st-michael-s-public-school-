@@ -169,11 +169,11 @@ box-shadow:
 
 display:none;
 
-position:absolute;
+position:fixed;
 
 top:78px;
 
-right:0;
+right:20px;
 
 width:280px;
 
