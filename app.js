@@ -70,23 +70,27 @@ console.log("Firebase Connected");
 // ===================================
 // MENU
 // ===================================
+// ===================================
+// MENU
+// ===================================
 
-const menuBtn = document.getElementById("menuBtn");
-const menuDropdown = document.getElementById("menuDropdown");
+const menuBtn =
+document.getElementById("menuBtn");
 
-if (menuBtn && menuDropdown) {
+const menuDropdown =
+document.getElementById("menuDropdown");
 
-menuBtn.addEventListener("click", function(e){
+if(menuBtn){
 
-e.stopPropagation();
+menuBtn.addEventListener("click",()=>{
 
-if(menuDropdown.style.display === "block"){
+if(menuDropdown.style.display==="block"){
 
-menuDropdown.style.display = "none";
+menuDropdown.style.display="none";
 
 }else{
 
-menuDropdown.style.display = "block";
+menuDropdown.style.display="block";
 
 }
 
@@ -98,19 +102,20 @@ menuDropdown.style.display = "block";
 // CLOSE MENU OUTSIDE CLICK
 // ===================================
 
-document.addEventListener("click", function(e){
+document.addEventListener("click",(e)=>{
 
 if(
 menuDropdown &&
 !menuDropdown.contains(e.target) &&
-e.target !== menuBtn
+e.target!==menuBtn
 ){
 
-menuDropdown.style.display = "none";
+menuDropdown.style.display="none";
 
 }
 
 });
+
 // ===================================
 // ADMIN LOGIN
 // ===================================
