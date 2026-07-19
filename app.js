@@ -430,9 +430,7 @@ alert(
 // ===================================
 
 const reviewsContainer =
-document.getElementById(
-"reviewsContainer"
-);
+document.getElementById("reviewsContainer");
 
 if(reviewsContainer){
 
@@ -444,38 +442,68 @@ where("approved","==",true)
 
 onSnapshot(q,(snapshot)=>{
 
-reviewsContainer.innerHTML="";
+const reviews=[];
 
 snapshot.forEach((docSnap)=>{
 
-const data =
-docSnap.data();
+reviews.push(docSnap.data());
 
-reviewsContainer.innerHTML += `
+});
+
+if(reviews.length===0){
+
+reviewsContainer.innerHTML=
+"<p>No reviews available.</p>";
+
+return;
+
+}
+
+let current=0;
+
+function showReview(){
+
+const data=reviews[current];
+
+reviewsContainer.innerHTML=`
 
 <div class="review-card">
 
-<h4>
-${data.name}
-</h4>
+<h4>${data.name}</h4>
 
-<p>
-${data.role}
-</p>
+<p><strong>${data.role}</strong></p>
 
-<p>
-${data.review}
-</p>
+<p>${data.review}</p>
 
 </div>
 
 `;
 
-});
+current++;
 
-});
+if(current>=reviews.length){
+
+current=0;
 
 }
+
+}
+
+showReview();
+
+clearInterval(window.reviewSlider);
+
+window.reviewSlider=setInterval(
+
+showReview,
+
+5000
+
+);
+
+});
+
+    }
 
 // ===================================
 // PAGE READY
