@@ -71,25 +71,16 @@ console.log("Firebase Connected");
 // MENU
 // ===================================
 
-const menuBtn =
-document.getElementById("menuBtn");
+const menuBtn = document.getElementById("menuBtn");
+const menuDropdown = document.getElementById("menuDropdown");
 
-const menuDropdown =
-document.getElementById("menuDropdown");
+if (menuBtn && menuDropdown) {
 
-if(menuBtn){
+menuBtn.addEventListener("click", function(e){
 
-menuBtn.addEventListener("click",()=>{
+e.stopPropagation();
 
-if(menuDropdown.style.display==="block"){
-
-menuDropdown.style.display="none";
-
-}else{
-
-menuDropdown.style.display="block";
-
-}
+menuDropdown.classList.toggle("show-menu");
 
 });
 
