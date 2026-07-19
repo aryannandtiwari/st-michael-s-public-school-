@@ -116,134 +116,60 @@ color:#666;
 letter-spacing:.6px;
 
 }
-/* ===================================
-   MENU
-=================================== */
 
-.menu-btn{
+// ===================================
+// MENU
+// ===================================
 
-width:60px;
-height:60px;
+const menuBtn = document.getElementById("menuBtn");
+const menuDropdown = document.getElementById("menuDropdown");
 
-border:none;
-border-radius:50%;
+if (menuBtn && menuDropdown) {
 
-cursor:pointer;
+    // Toggle menu
+    menuBtn.addEventListener("click", function(e) {
 
-font-size:30px;
-font-weight:700;
+        e.stopPropagation();
 
-background:
-linear-gradient(
-135deg,
-#ffd700,
-#ff9800
-);
+        if (menuDropdown.style.display === "block") {
 
-box-shadow:
-0 0 25px rgba(255,193,7,.8);
+            menuDropdown.style.display = "none";
 
-}
+        } else {
 
-.menu-dropdown{
+            menuDropdown.style.display = "block";
 
-display:none;
+        }
 
-position:absolute;
+    });
 
-top:90px;
-right:20px;
+    // Prevent closing when clicking inside menu
+    menuDropdown.addEventListener("click", function(e) {
 
-width:280px;
+        e.stopPropagation();
 
-background:white;
+    });
 
-border-radius:25px;
+    // Close when clicking outside
+    document.addEventListener("click", function() {
 
-padding:15px;
+        menuDropdown.style.display = "none";
 
-box-shadow:
-0 15px 35px rgba(0,0,0,.15);
+    });
 
-animation:menuFade .3s ease;
+    // Close when Escape key is pressed
+    document.addEventListener("keydown", function(e) {
 
-z-index:1000;
+        if (e.key === "Escape") {
 
-}
+            menuDropdown.style.display = "none";
 
-.menu-dropdown a{
+        }
 
-display:block;
+    });
 
-padding:12px;
+    }
 
-text-decoration:none;
-
-font-weight:600;
-
-color:#222;
-
-border-radius:10px;
-
-}
-
-.menu-dropdown a:hover{
-
-background:#eef5ff;
-
-color:#0d47a1;
-
-}
-
-.menu-dropdown input{
-
-width:100%;
-
-padding:12px;
-
-margin-top:10px;
-
-border:2px solid #ddd;
-
-border-radius:10px;
-
-}
-
-.menu-login-btn{
-
-width:100%;
-
-margin-top:10px;
-
-padding:12px;
-
-border:none;
-
-border-radius:10px;
-
-background:#0d47a1;
-
-color:white;
-
-font-weight:700;
-
-cursor:pointer;
-
-}
-
-@keyframes menuFade{
-
-from{
-opacity:0;
-transform:translateY(-10px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
 
 /* ===================================
    MAINTENANCE
