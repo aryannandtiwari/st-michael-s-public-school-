@@ -25,125 +25,94 @@ linear-gradient(
 color:#222;
 overflow-x:hidden;
 }
+
 /* ===================================
-   HEADER
+   PREMIUM HEADER
 =================================== */
 
 .top-header{
-
 position:sticky;
 top:0;
 z-index:999;
-
 display:flex;
 justify-content:space-between;
 align-items:center;
-
-padding:14px 25px;
-
-background:rgba(255,255,255,.95);
-
-backdrop-filter:blur(12px);
-
-box-shadow:
-0 5px 20px rgba(0,0,0,.08);
-
+padding:14px 28px;
+background:rgba(255,255,255,.92);
+backdrop-filter:blur(15px);
+box-shadow:0 6px 20px rgba(0,0,0,.08);
 }
 
 .header-left{
-
 display:flex;
 align-items:center;
 gap:16px;
-
 }
 
 .header-logo{
-
-width:72px;
-height:72px;
-
+width:82px;
+height:82px;
 object-fit:contain;
-
-filter:
-drop-shadow(0 0 10px rgba(13,71,161,.25));
-
+filter:drop-shadow(0 4px 10px rgba(13,71,161,.25));
 }
 
 .school-title{
-
 display:flex;
 flex-direction:column;
-justify-content:center;
-
 }
 
-.school-title h1{
-
-font-size:26px;
-
-font-weight:800;
-
-line-height:1.15;
-
-color:#0d47a1;
-
-letter-spacing:-0.4px;
-
+.shine-text{
 position:relative;
-
 display:inline-block;
-
+font-size:26px;
+font-weight:800;
+line-height:1.15;
+color:#12355B;
 overflow:hidden;
-
-text-shadow:
-0 2px 5px rgba(0,0,0,.08);
-
+letter-spacing:.3px;
+text-shadow:0 2px 6px rgba(0,0,0,.12);
 }
 
-.school-title h1::after{
+.shine-text::before{
 
 content:"";
 
 position:absolute;
 
 top:0;
-left:-120%;
+left:-160%;
 
-width:35%;
+width:55%;
 height:100%;
 
-background:
-linear-gradient(
+background:linear-gradient(
 110deg,
 transparent,
-rgba(255,255,255,.9),
+rgba(255,255,255,.95),
 transparent
 );
 
-transform:skewX(-20deg);
+transform:skewX(-25deg);
 
-animation:headerShine 5s linear infinite;
+animation:shineMove 4s linear infinite;
 
 }
 
-@keyframes headerShine{
+@keyframes shineMove{
 
 0%{
-
-left:-120%;
-
+left:-160%;
 }
 
 100%{
-
-left:150%;
-
+left:170%;
 }
 
 }
 
 .school-title p{
+
+margin-top:6px;
 
 font-size:14px;
 
@@ -151,11 +120,9 @@ font-weight:500;
 
 color:#666;
 
-margin-top:6px;
+letter-spacing:.5px;
 
-letter-spacing:.3px;
-
-}
+   }
 
 /* ===================================
    MENU
