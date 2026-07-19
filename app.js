@@ -80,7 +80,15 @@ menuBtn.addEventListener("click", function(e){
 
 e.stopPropagation();
 
-menuDropdown.classList.toggle("show-menu");
+if(menuDropdown.style.display === "block"){
+
+menuDropdown.style.display = "none";
+
+}else{
+
+menuDropdown.style.display = "block";
+
+}
 
 });
 
@@ -90,7 +98,7 @@ menuDropdown.classList.toggle("show-menu");
 // CLOSE MENU OUTSIDE CLICK
 // ===================================
 
-document.addEventListener("click",(e)=>{
+document.addEventListener("click", function(e){
 
 if(
 menuDropdown &&
@@ -98,12 +106,11 @@ menuDropdown &&
 e.target !== menuBtn
 ){
 
-menuDropdown.style.display="none";
+menuDropdown.style.display = "none";
 
 }
 
 });
-
 // ===================================
 // ADMIN LOGIN
 // ===================================
