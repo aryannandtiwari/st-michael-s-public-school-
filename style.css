@@ -238,90 +238,296 @@ linear-gradient(
 
 }
 
-// ===================================
-// MENU
-// ===================================
 
-const menuBtn = document.getElementById("menuBtn");
-const menuDropdown = document.getElementById("menuDropdown");
-
-if (menuBtn && menuDropdown) {
-
-menuBtn.addEventListener("click", function(e){
-
-e.stopPropagation();
-
-if(menuDropdown.style.display === "block"){
-
-menuDropdown.style.display = "none";
-
-}else{
-
-menuDropdown.style.display = "block";
-
-}
-
-});
-
-menuDropdown.addEventListener("click", function(e){
-
-e.stopPropagation();
-
-});
-
-document.addEventListener("click", function(e){
-
-if(
-!menuDropdown.contains(e.target) &&
-e.target !== menuBtn
-){
-
-menuDropdown.style.display = "none";
-
-}
-
-});
-
-document.addEventListener("keydown", function(e){
-
-if(e.key === "Escape"){
-
-menuDropdown.style.display = "none";
-
-}
-
-});
-
-window.addEventListener("scroll", function(){
-
-if(menuDropdown.style.display === "block"){
-
-menuDropdown.style.display = "none";
-
-}
-
-});
-
-   }
 /* ===================================
-   MAINTENANCE
+   MENU
 =================================== */
 
-.maintenance-banner{
+.menu-btn{
+
+width:55px;
+height:55px;
+
+border:none;
+border-radius:50%;
+
+cursor:pointer;
+
+font-size:30px;
+font-weight:700;
+
+color:#fff;
+
+background:linear-gradient(
+135deg,
+#FFD700,
+#FF9800
+);
+
+box-shadow:
+0 0 15px rgba(255,215,0,.6),
+0 0 30px rgba(255,193,7,.35);
+
+transition:.35s;
+
+}
+
+.menu-btn:hover{
+
+transform:rotate(90deg) scale(1.08);
+
+box-shadow:
+0 0 25px rgba(255,215,0,.9),
+0 0 40px rgba(255,152,0,.6);
+
+}
+
+.menu-dropdown{
 
 display:none;
 
-text-align:center;
+position:fixed;
 
-padding:15px;
+top:82px;
 
-background:#ffeb3b;
+right:18px;
+
+width:300px;
+
+padding:18px;
+
+border-radius:22px;
+
+background:rgba(255,255,255,.97);
+
+backdrop-filter:blur(18px);
+
+border:3px solid transparent;
+
+border-image:linear-gradient(
+90deg,
+#FFD700,
+#FF9800,
+#00E5FF,
+#4CAF50,
+#FFD700
+)1;
+
+box-shadow:
+0 15px 45px rgba(0,0,0,.18),
+0 0 25px rgba(255,215,0,.30);
+
+z-index:99999;
+
+animation:
+menuFade .35s ease,
+menuBorder 5s linear infinite;
+
+}
+
+.menu-dropdown hr{
+
+border:none;
+
+height:1px;
+
+background:#ddd;
+
+margin:15px 0;
+
+}
+
+.menu-dropdown h3{
+
+font-size:22px;
 
 font-weight:700;
 
-color:#111;
+color:#0D47A1;
+
+text-align:center;
+
+margin-bottom:15px;
 
 }
+
+.menu-dropdown a{
+
+display:block;
+
+padding:12px 15px;
+
+margin-bottom:8px;
+
+text-decoration:none;
+
+font-size:16px;
+
+font-weight:600;
+
+color:#222;
+
+border-radius:12px;
+
+transition:.35s;
+
+}
+
+.menu-dropdown a:hover{
+
+background:linear-gradient(
+135deg,
+#FFD700,
+#FF9800
+);
+
+color:#fff;
+
+transform:translateX(8px);
+
+box-shadow:
+0 5px 15px rgba(255,193,7,.35);
+
+}
+
+.menu-dropdown input{
+
+width:100%;
+
+padding:12px;
+
+margin-bottom:12px;
+
+border:2px solid #ddd;
+
+border-radius:12px;
+
+font-size:15px;
+
+outline:none;
+
+transition:.3s;
+
+}
+
+.menu-dropdown input:focus{
+
+border-color:#FFD700;
+
+box-shadow:
+0 0 12px rgba(255,215,0,.45);
+
+}
+
+.menu-login-btn{
+
+width:100%;
+
+padding:13px;
+
+border:none;
+
+border-radius:12px;
+
+cursor:pointer;
+
+font-size:16px;
+
+font-weight:700;
+
+color:#fff;
+
+background:linear-gradient(
+135deg,
+#0D47A1,
+#1976D2
+);
+
+box-shadow:
+0 8px 20px rgba(13,71,161,.35);
+
+transition:.3s;
+
+}
+
+.menu-login-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+0 12px 25px rgba(13,71,161,.45);
+
+}
+
+@keyframes menuFade{
+
+from{
+
+opacity:0;
+
+transform:
+translateY(-15px)
+scale(.95);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+translateY(0)
+scale(1);
+
+}
+
+}
+
+@keyframes menuBorder{
+
+0%{
+
+border-image:
+linear-gradient(
+90deg,
+#FFD700,
+#FF9800,
+#00E5FF,
+#4CAF50,
+#FFD700
+)1;
+
+}
+
+50%{
+
+border-image:
+linear-gradient(
+90deg,
+#00E5FF,
+#4CAF50,
+#FFD700,
+#FF9800,
+#00E5FF
+)1;
+
+}
+
+100%{
+
+border-image:
+linear-gradient(
+90deg,
+#FFD700,
+#FF9800,
+#00E5FF,
+#4CAF50,
+#FFD700
+)1;
+
+}
+
+   }
 
 /* ===================================
    HERO
