@@ -247,51 +247,62 @@ const menuDropdown = document.getElementById("menuDropdown");
 
 if (menuBtn && menuDropdown) {
 
-    // Toggle menu
-    menuBtn.addEventListener("click", function(e) {
+menuBtn.addEventListener("click", function(e){
 
-        e.stopPropagation();
+e.stopPropagation();
 
-        if (menuDropdown.style.display === "block") {
+if(menuDropdown.style.display === "block"){
 
-            menuDropdown.style.display = "none";
+menuDropdown.style.display = "none";
 
-        } else {
+}else{
 
-            menuDropdown.style.display = "block";
+menuDropdown.style.display = "block";
 
-        }
+}
 
-    });
+});
 
-    // Prevent closing when clicking inside menu
-    menuDropdown.addEventListener("click", function(e) {
+menuDropdown.addEventListener("click", function(e){
 
-        e.stopPropagation();
+e.stopPropagation();
 
-    });
+});
 
-    // Close when clicking outside
-    document.addEventListener("click", function() {
+document.addEventListener("click", function(e){
 
-        menuDropdown.style.display = "none";
+if(
+!menuDropdown.contains(e.target) &&
+e.target !== menuBtn
+){
 
-    });
+menuDropdown.style.display = "none";
 
-    // Close when Escape key is pressed
-    document.addEventListener("keydown", function(e) {
+}
 
-        if (e.key === "Escape") {
+});
 
-            menuDropdown.style.display = "none";
+document.addEventListener("keydown", function(e){
 
-        }
+if(e.key === "Escape"){
 
-    });
+menuDropdown.style.display = "none";
 
-    }
+}
 
+});
 
+window.addEventListener("scroll", function(){
+
+if(menuDropdown.style.display === "block"){
+
+menuDropdown.style.display = "none";
+
+}
+
+});
+
+   }
 /* ===================================
    MAINTENANCE
 =================================== */
