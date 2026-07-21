@@ -238,6 +238,8 @@ By M.N. Tiwari
 
 async function checkMaintenance() {
 
+document.body.style.display = "none";
+
 const banner = document.getElementById("maintenanceBanner");
 
 try {
@@ -246,7 +248,12 @@ const snap = await getDoc(
 doc(db, "settings", "website")
 );
 
-if (!snap.exists()) return;
+if (!snap.exists()) {
+
+document.body.style.display = "block";
+return;
+
+}
 
 const data = snap.data();
 
@@ -256,63 +263,63 @@ document.body.innerHTML = `
 
 <div class="maintenance-page">
 
-    <div id="adminDot" title="Admin Login"></div>
+<div id="adminDot" title="Admin Login"></div>
 
-    <img src="photos/logo.png" class="maintenance-logo">
+<img src="photos/logo.png" class="maintenance-logo">
 
-    <h1>⚠ Website Under Maintenance</h1>
+<h1>⚠ Website Under Maintenance</h1>
 
-    <h2>St. Michael's Public School</h2>
+<h2>St. Michael's Public School</h2>
 
-    <p>
-        We are currently upgrading our website to serve students,
-        parents and visitors with a better experience.
-    </p>
+<p>
+We are currently upgrading our website to serve students,
+parents and visitors with a better experience.
+</p>
 
-    <p>
-        Thank you for your patience.
-        We will be back online shortly.
-    </p>
+<p>
+Thank you for your patience.
+We will be back online shortly.
+</p>
 
-    <div class="maintenance-school">
+<div class="maintenance-school">
 
-        <h3>
-            Excellence • Discipline • Character
-        </h3>
+<h3>Excellence • Discipline • Character</h3>
 
-        <p>
-            St. Michael's Public School is committed to nurturing young minds
-            through quality education, strong values and academic excellence.
-        </p>
+<p>
+St. Michael's Public School is committed to nurturing young minds
+through quality education, strong values and academic excellence.
+</p>
 
-        <p>
-            With a focus on Discipline and Character, the school empowers
-            students to become confident, responsible and successful individuals.
-        </p>
+<p>
+With a focus on Discipline and Character, the school empowers
+students to become confident, responsible and successful individuals.
+</p>
 
-    </div>
+</div>
 
-    <div class="contact-box">
+<div class="contact-box">
 
-        📍 School Road, Thakurgaon, Ranchi, Jharkhand
+📍 School Road, Thakurgaon, Ranchi, Jharkhand
 
-        <br><br>
+<br><br>
 
-        📞 +91 9835172689
+📞 +91 9835172689
 
-        <br>
+<br>
 
-        ✉ director.stmichael@gmail.com
+✉ director.stmichael@gmail.com
 
-    </div>
+</div>
 
-    <small>
-        © 2026 St. Michael's Public School
-    </small>
+<small>
+© 2026 St. Michael's Public School
+</small>
 
 </div>
 
 `;
+
+document.body.style.display = "block";
 
 setTimeout(() => {
 
@@ -350,17 +357,20 @@ banner.style.display="none";
 
 }
 
+document.body.style.display = "block";
+
 }
 catch(error){
 
 console.error(error);
+
+document.body.style.display = "block";
 
 }
 
 }
 
 checkMaintenance();
-
 
 // ===================================
 // REVIEW SUBMISSION
