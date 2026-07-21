@@ -787,13 +787,22 @@ margin:auto;
 
 .about-preview-image{
 
-width:100%;
+width:90%;
 
-max-width:900px;
+max-width:350px;
 
-border-radius:25px;
+height:250px;
 
-margin-bottom:30px;
+object-fit:cover;
+
+border-radius:10px;
+
+margin:0 auto 30px;
+
+display:block;
+
+box-shadow:
+0 8px 20px rgba(0,0,0,.1);
 
 }
 
