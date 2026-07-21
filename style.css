@@ -938,13 +938,15 @@ margin-bottom:30px;
 
 .gallery-preview img{
 
-width:100%;
+width:90%;
+
+height:250px;
 
 aspect-ratio:1/1;
 
 object-fit:cover;
 
-border-radius:20px;
+border-radius:10px;
 
 box-shadow:
 0 8px 20px rgba(0,0,0,.1);
