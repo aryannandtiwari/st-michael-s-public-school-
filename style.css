@@ -2078,3 +2078,108 @@ width:100px;
 }
 
 }
+
+
+/* ===================================
+   CONTACT SOCIAL
+=================================== */
+
+.social-grid{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:35px;
+
+flex-wrap:wrap;
+
+margin-top:25px;
+
+}
+
+.social-grid a{
+
+text-decoration:none;
+
+color:#0D47A1;
+
+font-weight:700;
+
+text-align:center;
+
+transition:.3s;
+
+}
+
+.social-grid img{
+
+width:55px;
+
+height:55px;
+
+object-fit:contain;
+
+padding:8px;
+
+background:#fff;
+
+border:3px solid #0D47A1;
+
+border-radius:16px;
+
+box-shadow:
+0 0 10px rgba(13,71,161,.45),
+0 0 16px rgba(255,215,0,.35);
+
+transition:.35s;
+
+}
+
+.social-grid a:hover img{
+
+transform:translateY(-6px) scale(1.08);
+
+border-color:#FFD700;
+
+box-shadow:
+0 0 15px #FFD700,
+0 0 22px #00E5FF;
+
+}
+
+.social-grid p{
+
+margin-top:10px;
+
+font-size:16px;
+
+}
+
+@media(max-width:768px){
+
+.social-grid{
+
+gap:20px;
+
+}
+
+.social-grid img{
+
+width:45px;
+
+height:45px;
+
+padding:6px;
+
+}
+
+.social-grid p{
+
+font-size:14px;
+
+}
+
+   }
